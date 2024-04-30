@@ -99,19 +99,7 @@ void reserve_checking_up(List** list, int idx) {
 		
 		if (strcmp(n->data.RVI[reserve_time].patient, "")) {
 			printf("This time is already reserved\n");
-			for (int i = 0; i < 24; i++) {
-				if (!strcmp(n->data.RVI[i].patient, "")) continue;
-				
-			}
 			
-			printf("If you want to change another hospitals, then enter another hospital index : ");
-			scanf("%d", &idx);
-			int tmp_idx = 1;
-			n = (*list)->head;
-			while (tmp_idx < idx) {
-				n = n->next;
-				tmp_idx++;
-			}
 			continue;
 		}
 		printf("Please enter the patient name: ");
